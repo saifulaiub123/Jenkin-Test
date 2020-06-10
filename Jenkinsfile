@@ -9,9 +9,9 @@ pipeline {
 				}
 				stage('Build') {
     					steps {
-						dir('FeedbackCollection/'){
+						
 						bat "\"${tool 'MsBuild'}\" FeedbackCollection.sln /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:SkipInvalidConfigurations=true /t:build /p:Configuration=Release /p:Platform=\"Any CPU\" /p:DeleteExistingFiles=True /p:publishUrl=c:\\inetpub\\wwwroot"
-						}
+						
     					    
     					}
 				}
